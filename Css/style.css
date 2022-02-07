@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
           transition-duration: 0.3s;
 }
 .btn_white span {
-  background: url("Img/Working/Icon_01.png") no-repeat left;
+  background: url("../Img/Working/Icon_01.png") no-repeat left;
   padding-left: 35px;
 }
 .btn_white:hover {
@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-form__button span {
   padding-right: 30px;
-  background: url("Img/Main/Icon_01.png") no-repeat right;
+  background: url("../Img/Main/Icon_01.png") no-repeat right;
   background-position: right 60%;
 }
 @media (max-width: 479.98px) {
