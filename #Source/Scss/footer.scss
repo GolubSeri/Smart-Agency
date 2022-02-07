@@ -1,0 +1,128 @@
+.footer-top {
+	@include flexbox();
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 77px;
+	padding-bottom: 100px;
+	background-color: #fbfbfb;
+
+	img{
+		align-self: center;
+		opacity: 0.2;
+
+		transition-duration: 0.4s;
+
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+
+	@media (max-width: $md2 + px){
+		flex-wrap: wrap;
+		@include adaptiv-value('padding-bottom', 100, 25, 320);
+		@include adaptiv-value('padding-top', 77, 45, 320);
+		img{
+			margin: 0px 20px;
+			margin-bottom: 30px;
+		}
+	};
+}
+.footer-bottom {
+	background-color: #f7f7f7;
+	padding-top: 40px;
+	padding-bottom: 55px;
+
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: $md2 + px){
+		@include adaptiv-value('padding-bottom', 40, 30, 320);
+	};
+}
+
+.footer-bottom__button {
+	padding: 20px 76px;
+	background-color: #fdfdfd;
+	border: 1px solid rgba(1,2,2,0.06);
+	box-shadow: 2px 11px 20px -1px rgba(20,20,21,0.07);
+	border-radius: 27px;
+
+	margin-bottom: 50px;
+	margin-top: 10px;
+
+	font-size: 16px;
+	font-weight: 400;
+	color: #000000;
+	font-family: 'Open Sans';
+
+	transition-duration: 0.3s;
+
+	&:hover{
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	&:active {
+		transform: scale(1.07);
+	}
+}
+.footer-bottom-links {
+	@include flexbox();
+	align-items: center;
+
+	span{
+		font-family: 'Open Sans';
+		opacity: 0.6;
+		font-size: 17px;
+		font-weight: 400;
+		color: #040404;
+
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	@media (max-width: $md3 + px){
+		flex-direction: column;
+
+		span{
+			margin: 0px 0px;
+		}
+	};
+}
+.footer-bottom-links__social {
+	@include flexbox();
+	align-items: center;
+	i{
+		font-size: 21.4px;
+		font-weight: 400;
+		color: #ffffff;
+	}
+
+	a{
+		@include flexbox();
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+
+		margin-right: 16px;
+
+		background-color: #d3d3d3;
+
+		width: 50px;
+		height: 50px;
+
+		transition-duration: 0.4s;
+
+		&:hover{
+			background-color: #ff6e47;
+		}
+	}
+
+	@media (max-width: $md3 + px){
+		margin-bottom: 35px;
+
+		a{
+			margin: 0px 8px;
+		}
+	};
+}
+
