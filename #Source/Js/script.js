@@ -32,3 +32,26 @@ amh();
 jQuery(window).resize(function() { 
 	amh();
  });
+
+new Swiper('.clients-midle', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+
+	loop: true,
+
+	autoplay: {
+		delay: 5000,
+		stopOnLastSlide: false,
+		// Отключение после ручного переключения
+		disableOnInteraction: true,
+	},
+
+	speed: 500,
+});

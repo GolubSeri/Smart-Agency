@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link rel="stylesheet" href="Css/all.css">
 		<link rel="stylesheet" href="Css/style.css">
+		<link rel="stylesheet" href="Css/swiper-bundle.min.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -196,29 +197,79 @@
 						</div>
 					</div>
 					<div class="services-midle">
-						<div class="services-midle-columns">
-							<div class="serives-milde-columns__icons">
-								<img src="Img/Services/Image_01.png" alt="">
-								<img src="Img/Services/Image_02.png" alt="">
-								<img src="Img/Services/Image_03.png" alt="">
-							</div>
-							<div class="serives-milde-columns-info">
-								<div class="serives-milde-columns-info__title">
-									Modern App Design
-								</div>
-								<div class="serives-milde-columns-info__text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum totam ad sint error porro. Consectetur, sunt, aperiam. Magni rem optio distinctio illum consequuntur delectus nulla illo aperiam itaque cumque.</p>
-
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia vitae eveniet quam rem unde facilis.</p>
-
-									<p>Vitae eveniet quam rem unde facilis.</p>
-								</div>
-								<a href="#" class="serives-milde-columns-info__button btn_white">
-									<span>Know More</<span>
+						<div class="services-midle-tabs">
+							<div class="serives-milde-tabs__items">
+								<a href="#">
+									<img src="Img/Services/Image_01.png" alt="">
 								</a>
-							</div>
-							<div class="serives-milde-columns__image">
-								<img src="Img/Services/Image_05.png" alt="">
+								<a href="#">
+									<img src="Img/Services/Image_02.png" alt="">
+								</a>
+								<a href="#">
+									<img src="Img/Services/Image_03.png" alt="">
+								</a>
+							</div>	
+							<div class="serives-milde-tabs__body">
+								<div id="tab_01" class="serives-milde-tabs-block">
+									<div class="serives-milde-tabs-block-info">
+										<div class="serives-milde-tabs-block-info__title">
+											Modern App Design
+										</div>
+										<div class="serives-milde-tabs-block-info__text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum totam ad sint error porro. Consectetur, sunt, aperiam. Magni rem optio distinctio illum consequuntur delectus nulla illo aperiam itaque cumque.</p>
+
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia vitae eveniet quam rem unde facilis.</p>
+
+											<p>Vitae eveniet quam rem unde facilis.</p>
+										</div>
+										<a href="#" class="serives-milde-tabs-block-info__button btn_white">
+											<span>Know More</<span>
+										</a>
+									</div>
+									<div class="serives-milde-tabs-block__image">
+										<img src="Img/Services/Image_05.png" alt="">
+									</div>
+								</div>
+<!-- 								<div id="tab_02" class="serives-milde-tabs-block">
+									<div class="serives-milde-tabs-block-info">
+										<div class="serives-milde-tabs-block-info__title">
+											Modern Web Design
+										</div>
+										<div class="serives-milde-tabs-block-info__text">
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Alias consequatur commodi culpa ab dolore dignissimos dolorum dolores sint possimus quia reiciendis necessitatibus soluta, id, qui suscipit pariatur! Voluptates voluptate, amet expedita doloremque quidem delectus atque unde animi illum, facilis culpa!</p>
+
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet dolorem molestiae placeat totam praesentium voluptatum.</p>
+
+											<p>Lorem ipsum dolor sit amet consectetur.</p>
+										</div>
+										<a href="#" class="serives-milde-tabs-block-info__button btn_white">
+											<span>Know More</<span>
+										</a>
+									</div>
+									<div class="serives-milde-tabs-block__image">
+										<img src="Img/Services/Image_06.png" alt="">
+									</div>
+								</div>
+								<div id="tab_03" class="serives-milde-tabs-block">
+									<div class="serives-milde-tabs-block-info">
+										<div class="serives-milde-tabs-block-info__title">
+											Modern Play Design
+										</div>
+										<div class="serives-milde-tabs-block-info__text">
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ratione error sit eum magnam tempore ullam?</p>
+
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+											<p>Lorem ipsum, dolor sit amet.</p>
+										</div>
+										<a href="#" class="serives-milde-tabs-block-info__button btn_white">
+											<span>Know More</<span>
+										</a>
+									</div>
+									<div class="serives-milde-tabs-block__image">
+										<img src="Img/Services/Image_07.png" alt="">
+									</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -331,50 +382,138 @@
 							Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.
 						</div>
 					</div>
-					<div class="clients-midle">
-						<div class="clients-midle-columns">
-							<div class="clients-midle-columns-item">
-								<div class="clients-midle-columns-item__image ibg">
-									<img src="Img/Clients/Image_01.jpg" alt="">
+					<div class="clients-midle swiper">
+						<div class="clients-midle-columns swiper-wrapper">
+							<div class="clients-midle-columns-items swiper-slide">
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item__image ibg">
+										<img src="Img/Clients/Image_01.jpg" alt="">
+									</div>
+									<div class="clients-midle-columns-item__text">
+										“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+									</div>
+									<div class="clients-midle-columns-item__star">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+									</div>
+									<div class="clients-midle-columns-item__name">
+										<span>Narrator Sebastian</span>, HK Director
+									</div>
 								</div>
-								<div class="clients-midle-columns-item__text">
-									“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
-								</div>
-								<div class="clients-midle-columns-item__star">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-								</div>
-								<div class="clients-midle-columns-item__name">
-									<span>Narrator Sebastian</span>, HK Director
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item swiper-slide">
+										<div class="clients-midle-columns-item__image ibg">
+											<img src="Img/Clients/Image_02.jpg" alt="">
+										</div>
+										<div class="clients-midle-columns-item__text">
+											“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+										</div>
+										<div class="clients-midle-columns-item__star">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+										</div>
+										<div class="clients-midle-columns-item__name">
+											<span>Tyler Durden</span>, UX Director
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="clients-midle-columns-item">
-								<div class="clients-midle-columns-item__image ibg">
-									<img src="Img/Clients/Image_02.jpg" alt="">
+							<div class="clients-midle-columns-items swiper-slide">
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item__image ibg">
+										<img src="Img/Clients/Image_03.jpg" alt="">
+									</div>
+									<div class="clients-midle-columns-item__text">
+										“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+									</div>
+									<div class="clients-midle-columns-item__star">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+									</div>
+									<div class="clients-midle-columns-item__name">
+										<span>Narrator Sebastian</span>, HK Director
+									</div>
 								</div>
-								<div class="clients-midle-columns-item__text">
-									“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item swiper-slide">
+										<div class="clients-midle-columns-item__image ibg">
+											<img src="Img/Clients/Image_04.jpg" alt="">
+										</div>
+										<div class="clients-midle-columns-item__text">
+											“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+										</div>
+										<div class="clients-midle-columns-item__star">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+										</div>
+										<div class="clients-midle-columns-item__name">
+											<span>Tyler Durden</span>, UX Director
+										</div>
+									</div>
 								</div>
-								<div class="clients-midle-columns-item__star">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
-									<img src="Img/Clients/Icon_01.png" alt="">
+							</div>
+							<div class="clients-midle-columns-items swiper-slide">
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item__image ibg">
+										<img src="Img/Clients/Image_05.jpg" alt="">
+									</div>
+									<div class="clients-midle-columns-item__text">
+										“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+									</div>
+									<div class="clients-midle-columns-item__star">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+										<img src="Img/Clients/Icon_01.png" alt="">
+									</div>
+									<div class="clients-midle-columns-item__name">
+										<span>Narrator Sebastian</span>, HK Director
+									</div>
 								</div>
-								<div class="clients-midle-columns-item__name">
-									<span>Tyler Durden</span>, UX Director
+								<div class="clients-midle-columns-item">
+									<div class="clients-midle-columns-item swiper-slide">
+										<div class="clients-midle-columns-item__image ibg">
+											<img src="Img/Clients/Image_06.jpg" alt="">
+										</div>
+										<div class="clients-midle-columns-item__text">
+											“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”
+										</div>
+										<div class="clients-midle-columns-item__star">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+											<img src="Img/Clients/Icon_01.png" alt="">
+										</div>
+										<div class="clients-midle-columns-item__name">
+											<span>Tyler Durden</span>, UX Director
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
 				</div>
 			</div>	
 			<!-- @import "footer.html" -->
 		</div>
+		<script src="Js/swiper-bundle.min.js"></script>
 		<!-- @import "js.html" -->
 	</body>
 </html>
