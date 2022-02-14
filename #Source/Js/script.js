@@ -99,12 +99,15 @@ if (menuLinks.length > 0){
 			e.preventDefault();
 
 			// Закрываем меню при переходе на блок
-			iconMenu.classList.toggle('_active');
-			menuBody.classList.toggle('_active');
-			mainLogo.classList.remove('_display')
-			setTimeout(() => {
-				mainLogo.classList.remove('_disable')
-			}, 1);
+			if(iconMenu.classList.contains('_active')){
+				document.body.classList.remove('_lock');
+				iconMenu.classList.toggle('_active');
+				menuBody.classList.toggle('_active');
+				mainLogo.classList.remove('_display')
+				setTimeout(() => {
+					mainLogo.classList.remove('_disable')
+				}, 1);
+			}
 		}
 	}
 }
