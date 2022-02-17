@@ -321,6 +321,16 @@ body._lock{
 		line-height: 44px;
 		@include adaptiv-value('margin-bottom', 35, 20, 320);
 	};
+
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+
+	}
 }
 .main-midle__text {
 	opacity: 0.65;
@@ -336,6 +346,15 @@ body._lock{
 	@media (max-width: $md3 + px){
 		@include adaptiv-value('line-height', 25, 22.5, 320);
 	};
+
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 0.8s ease 0.3s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 }
 .main-body-bottom {
 	flex-grow: 1;
@@ -363,6 +382,15 @@ body._lock{
 	width: 100%;
 	max-height: 390px;
 	padding: 25px 40px 20px 40px;
+
+	transform: translate(-100%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 }
 .main-form__text {
 	text-align: center;
@@ -505,6 +533,28 @@ body._lock{
 		margin-right: 0;
 	}
 
+	transform: translate(-100%, 0px);
+	opacity: 0;
+	
+	&.first{
+		transition: all 0.8s ease 0s;
+	}
+	&.second{
+		transition: all 0.8s ease 0.2s;
+	}
+	&.third{
+		transition: all 0.8s ease 0.4s;
+	}
+	&.fourth{
+		transition: all 0.8s ease 0.6s;
+	}
+
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
 	@media (max-width: $md1 + px){
 		margin-right: 0;
 		flex: 0 0 50%;
@@ -515,6 +565,13 @@ body._lock{
 		}
 		&:nth-child(even){
 			@include adaptiv-value('padding-right', 150, 20, 767);
+		}
+
+		&.first, &.third{
+			transition: all 0.8s ease 0s;
+		}
+		&.second, &.fourth{
+			transition: all 0.8s ease 0.2s;
 		}
 	};
 
@@ -527,6 +584,9 @@ body._lock{
 		}
 		&:nth-child(even){
 			padding-right: 0px;
+		}
+		&.first, &.second, &.third, &.fourth{
+			transition: all 0.8s ease 0s;
 		}
 	};
 }
@@ -651,6 +711,15 @@ body._lock{
 		justify-content: flex-end;
 	}
 
+	transform: translate(0px, 60px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
 	@media (max-width: $md1 + px){
 		flex: 50%;
 		&:nth-child(3n-1){
@@ -758,6 +827,18 @@ body._lock{
 	justify-content: space-evenly;
 	max-height: 400px;
 
+	img{
+		transform: translate(-100px, 00px);
+		opacity: 0;
+		transition: all 0.8s ease 0.1s;
+
+		&._active{
+			transform: translate(0px, 0px);
+			opacity: 1;
+
+		}
+	}
+
 	@media (max-width: $md1 + px){
 		@include adaptiv-value('margin-right', 130, 60, 992);
 	};
@@ -841,6 +922,15 @@ body._lock{
 }
 .serives-milde-columns__image {
 	margin-right: -45px;
+
+	transform: translate(100%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 
 	@media (max-width: $md2 + px){
 		flex: 100%;
@@ -928,6 +1018,22 @@ body._lock{
 
 	transition-duration: 0.5s;
 
+	transform: translate(-100%, 0px);
+	opacity: 0;
+	&.first{
+		transition: all 1s ease 0s;
+	}
+	&.second{
+		transition: all 1s ease 0.2s;
+	}
+	&.third{
+		transition: all 1s ease 0.4s;
+	}
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
 	&:after{
 		transition-duration: 0.5s;
 		opacity: 0;
@@ -981,6 +1087,10 @@ body._lock{
 		margin-bottom: 60px;
 		&:last-child{
 			margin-bottom: 0;
+		}
+
+		&.first, &.second, &.third{
+			transition: all 1s ease 0s;
 		}
 	};
 
@@ -1161,6 +1271,13 @@ body._lock{
 
 	margin-bottom: 50px;
 
+	transform: scale(0);
+	transition: all 0.8s ease 0.2s;
+
+	&._active{
+		transform: scale(1);
+	}
+
 	@media (max-width: $md2 + px){
 		@include adaptiv-value('margin-bottom', 50, 25, 320);
 	};
@@ -1183,6 +1300,15 @@ body._lock{
 
 	margin-bottom: 18px;
 
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 1s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
 	@media (max-width: $md2 + px){
 		@include adaptiv-value('margin-bottom', 18, 12, 320);
 	};
@@ -1194,6 +1320,15 @@ body._lock{
 		&:last-child{
 			margin-right: 0;
 		}
+	}
+
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 1s ease 0.1s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
 	}
 
 	@media (max-width: $md2 + px){
@@ -1208,6 +1343,15 @@ body._lock{
 	font-family: 'Source Sans Pro';
 	font-weight: 400;
 	font-style: italic;
+
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 1s ease 0.2s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 	
 
 	span{
@@ -1215,7 +1359,16 @@ body._lock{
 		font-style: normal;
 	}
 }
+.swiper-pagination{
+	transform: translate(0px, -100px);
+	opacity: 0;
+	transition: all 1s ease 0s;
 
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
 .swiper-button-prev{
 	@extend %fa-icon;
 	@extend .fas;
@@ -1237,6 +1390,15 @@ body._lock{
 .swiper-button-next {
 	@extend %fa-icon;
 	@extend .fas;
+
+	transform: translate(100%, 0px);
+	opacity: 0;
+	transition: all 1s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 
 	@media (min-width: $md2 + px){
 		&:hover{

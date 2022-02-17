@@ -55,6 +55,7 @@ new Swiper('.clients-midle', {
 	speed: 500,
 });
 
+// Бургер
 const iconMenu = document.querySelector('.burger__icon');
 const menuBody = document.querySelector('.burger__body');
 const mainLogo = document.querySelector('.main-header__logo');
@@ -64,7 +65,7 @@ if(iconMenu){
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
 
-		// Если бургер закрыт
+		// Если закрыт
 		if (!mainLogo.classList.contains('_disable')){
 			mainLogo.classList.add('_disable');
 			setTimeout(() => {
@@ -111,7 +112,6 @@ if (menuLinks.length > 0){
 		}
 	}
 }
-
 const logoLink = document.querySelector('.logo__link');
 if(logoLink){
 	logoLink.addEventListener('click', function(e){
@@ -121,4 +121,44 @@ if(logoLink){
 		});
 		e.preventDefault();
 	});
+}
+
+// Анимация при скролле
+const animItems = document.querySelectorAll('._animItems');
+
+if (animItems.length > 0){
+	window.addEventListener('scroll', animOnScroll);
+	function animOnScroll(params){
+		for (let i = 0; i < animItems.length; i++) {
+			const animItem = animItems[i];
+			const animItemHeight = animItem.offsetHeight;
+			const animItemOffset = offset(animItem).top;
+			const animStart = 4;
+
+			let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+			if (animItemHeight > window.innerHeight){
+				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			}
+
+			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+				animItem.classList.add('_active');
+			}
+			// } else {
+			// 	if(!animItem.classList.contains('_anim-no-hide')){
+			// 		animItem.classList.remove('_active');
+			// 	}
+			// }
+		}
+	}
+	function offset(el) {
+		const rect = el.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+	}
+
+	setTimeout(() => {
+		animOnScroll();
+	}, 300);
 }
