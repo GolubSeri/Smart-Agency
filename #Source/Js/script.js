@@ -125,6 +125,7 @@ if(logoLink){
 
 // Анимация при скролле
 const animItems = document.querySelectorAll('._animItems');
+const hoverItems = document.querySelectorAll('._noHover');
 
 if (animItems.length > 0){
 	window.addEventListener('scroll', animOnScroll);
@@ -143,6 +144,13 @@ if (animItems.length > 0){
 
 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
 				animItem.classList.add('_active');
+
+				if (animItem.classList.contains('_disableHover')){
+					setTimeout(() => {
+						animItem.classList.remove('_disableHover');
+						animItem.classList.add('_activeHover');
+					}, 1500);
+				}
 			}
 			// } else {
 			// 	if(!animItem.classList.contains('_anim-no-hide')){
@@ -161,4 +169,58 @@ if (animItems.length > 0){
 	setTimeout(() => {
 		animOnScroll();
 	}, 300);
+}
+
+// Табы
+
+const tabBtns = Array.from(document.querySelectorAll(".tabs-triggers__item"));
+
+tabBtns[0].classList.add("_active");
+let activeBtn = tabBtns[0];
+
+const tabSlides = Array.from(document.querySelectorAll(".tabs-content-item"));
+
+tabSlides[0].classList.add("_active");
+tabSlides[0].classList.add("_enable");
+let activeSlide = tabSlides[0];
+
+tabBtns.forEach((element) => {
+	element.addEventListener("click", onTabBtnClick);
+});
+
+function onTabBtnClick(e) {
+	e.preventDefault();
+	const btn = e.target.closest(".tabs-triggers__item");
+	changeBtn(btn);
+}
+
+function changeBtn(btn){
+
+	if (btn.classList.contains("_active")){
+		return;
+	}
+	activeBtn.classList.remove("_active");
+	btn.classList.add("_active");
+	activeBtn = btn;
+
+	const indexBtn = tabBtns.indexOf(btn);
+	changeSlide(indexBtn);
+}
+
+function changeSlide(index){
+	let slideImage = activeSlide.querySelector('.tabs-content-item__image');
+	slideImage.classList.remove('_active');
+	activeSlide.classList.remove("_active");
+
+	setTimeout(() => {
+		activeSlide.classList.remove("_enable");
+		tabSlides[index].classList.add("_enable");
+	}, 400);
+	setTimeout(() => {
+		tabSlides[index].classList.add("_active");
+		activeSlide = tabSlides[index];
+
+		slideImage = activeSlide.querySelector('.tabs-content-item__image');
+		slideImage.classList.add("_active");
+	}, 450);
 }
