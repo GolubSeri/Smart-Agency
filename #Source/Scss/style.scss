@@ -512,11 +512,8 @@ body._lock{
 }
 .working-columns {
 	@include flexbox();
-	justify-content: center;
-
-	@media (max-width: $md1 + px){
-		flex-wrap: wrap;
-	};
+	justify-content: space-between;
+	flex-wrap: wrap;
 
 	margin-bottom: 160px;
 	@media (max-width: $md2 + px){
@@ -528,10 +525,7 @@ body._lock{
 	@include flexbox();
 	justify-content: center;
 
-	margin-right: 30px;
-	&:last-child{
-		margin-right: 0;
-	}
+	margin-bottom: 30px;
 
 	transform: translate(-100%, 0px);
 	opacity: 0;
