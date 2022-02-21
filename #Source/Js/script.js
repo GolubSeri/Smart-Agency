@@ -52,7 +52,7 @@ new Swiper('.clients-midle', {
 		disableOnInteraction: true,
 	},
 
-	speed: 500,
+	speed: 1000,
 });
 
 // Бургер
@@ -222,5 +222,35 @@ function changeSlide(index){
 
 		slideImage = activeSlide.querySelector('.tabs-content-item__image');
 		slideImage.classList.add("_active");
+		equalHeight();
 	}, 450);
 }
+
+// Равная высота слайдов
+function equalHeight(){
+	if (window.screen.width > 993){
+		const equaElements = document.querySelectorAll(".tabs-content-item");
+		let maxHeight = equaElements[0].clientHeight;
+
+		for (let i = 0; i < equaElements.length; i++) {
+			if (maxHeight < equaElements[i].clientHeight){
+				maxHeight = equaElements[i].clientHeight;
+			}
+		}
+		console.log(maxHeight);
+		document.querySelector('.tabs-content').style.minHeight = maxHeight + "px";
+	} else {
+		const equaElements = document.querySelector(".tabs-content-item._active");
+		console.log(equaElements.clientHeight + "px");
+		document.querySelector('.tabs-content').style.minHeight = equaElements.clientHeight + "px";
+	}
+
+}
+equalHeight();
+
+jQuery(window).resize(function() { 
+	equalHeight();
+ });
+
+
+

@@ -8450,7 +8450,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 992.98px) {
   .tabs-triggers {
-    margin-left: 15px;
+    margin-bottom: 30px;
     max-width: 500px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -8464,26 +8464,62 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabs-triggers__item {
   cursor: pointer;
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+.tabs-triggers__item._active img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .tabs-triggers__item img {
+  width: 100%;
   -webkit-transform: translate(-100px, 0px);
           transform: translate(-100px, 0px);
   opacity: 0;
-  -webkit-transition: all 0.8s ease 0.1s;
-  transition: all 0.8s ease 0.1s;
+  -webkit-transition: all 0.4s ease 0.1s;
+  transition: all 0.4s ease 0.1s;
 }
 .tabs-triggers__item img._active {
+  border-radius: 50%;
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   opacity: 1;
 }
+.tabs-triggers__item img:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .tabs-content {
   width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 992.98px) {
+  .tabs-content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .tabs-content-item {
-  display: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  position: absolute;
+  visibility: hidden;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   opacity: 0;
@@ -8491,21 +8527,16 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.tabs-content-item._enable {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0;
-}
 .tabs-content-item._enable._active {
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   opacity: 1;
+  visibility: visible;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1168px) {
   .tabs-content-item {
-    margin-left: 15px;
-    margin-right: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media (max-width: 992.98px) {
@@ -8515,7 +8546,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: 15px;
   }
 }
 
@@ -8535,14 +8565,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 992.98px) {
   .tabs-content-item-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -9226,6 +9248,20 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+.swiper-button-prev {
+  -webkit-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  transition: -webkit-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transition: transform 1s ease 0s, -webkit-transform 1s ease 0s;
+}
+.swiper-button-prev._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
 @media (min-width: 992.98px) {
   .swiper-button-prev:hover {
     background-color: #ff6e47;
@@ -9243,8 +9279,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translate(100%, 0px);
           transform: translate(100%, 0px);
   opacity: 0;
-  -webkit-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  transition: -webkit-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transition: transform 1s ease 0s, -webkit-transform 1s ease 0s;
 }
 .swiper-button-next._active {
   -webkit-transform: translate(0px, 0px);

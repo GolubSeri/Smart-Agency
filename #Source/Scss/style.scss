@@ -830,56 +830,79 @@ body._lock{
 	max-width: 220px;
 	width: 100%;
 
-
 	@media (max-width: $md2 + px){
-		margin-left: 15px;
+		margin-bottom: 30px;
 		max-width: 500px;
 		flex-direction: row;
 		align-items: flex-start;
 	};
 }
+
 .tabs-triggers__item {
 	cursor: pointer;
 
+	max-width: 90px;
+	max-height: 90px;
+	border-radius: 50%;
+	transition-duration: 0.7s;
+
+	&._active img{
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
 	img{
-		transform: translate(-100px, 00px);
+		width: 100%;
+
+		transform: translate(-100px, 0px);
 		opacity: 0;
-		transition: all 0.8s ease 0.1s;
+		transition: all 0.4s ease 0.1s;
 
 		&._active{
+			border-radius: 50%;
 			transform: translate(0px, 0px);
 			opacity: 1;
+		}
+
+		&:hover{
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
 	}
 }
 .tabs-content {
 	width: 100%;
+	position: relative;
+	@include flexbox();
+
+	align-items: center;
+	@media (max-width: $md2 + px){
+		align-items: flex-start;
+	};
+
 }
 .tabs-content-item {
-	display: none;
+	width: 100%;
+	@include flexbox();
+	position: absolute;
 
+	visibility: hidden;
 	transition-duration: 0.4s;
 	opacity: 0;
 
 	&._enable{
-		@include flexbox();
 		&._active{
 			transition-duration: 0.4s;
 			opacity: 1;
+			visibility: visible;
 		}
 	}
-
 	justify-content: space-between;
-
-	@media (max-width: 1200px){
-		margin-left: 15px;
-		margin-right: 35px;
+	@media (max-width: $md1 + px){
+		padding-left: 10px;
+		padding-right: 10px;
 	};
-
 	@media (max-width: $md2 + px){
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-right: 15px;
 	};
 }
 .tabs-content-item-info {
@@ -889,8 +912,6 @@ body._lock{
 	justify-content: center;
 
 	@media (max-width: $md2 + px){
-		@include flexbox();
-		flex-direction: column;
 		text-align: center;
 		align-items: center;
 	};
@@ -1400,6 +1421,15 @@ body._lock{
 	@extend %fa-icon;
 	@extend .fas;
 
+	transform: translate(-100%, 0px);
+	opacity: 0;
+	transition: transform 1s ease 0s;
+
+	&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+
 	@media (min-width: $md2 + px){
 		&:hover{
 			background-color: #ff6e47;
@@ -1420,7 +1450,7 @@ body._lock{
 
 	transform: translate(100%, 0px);
 	opacity: 0;
-	transition: all 1s ease 0s;
+	transition: transform 1s ease 0s;
 
 	&._active{
 		transform: translate(0px, 0px);
